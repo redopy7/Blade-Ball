@@ -27,7 +27,7 @@ local ScriptBTN = Instance.new("Frame")
 local UICorner_5 = Instance.new("UICorner")
 local TextLabel_5 = Instance.new("TextLabel")
 local UITextSizeConstraint_5 = Instance.new("UITextSizeConstraint")
-local UIStroke_Script = Instance.new("UIStroke") -- Added UIStroke for Script button
+local UIStroke_Script = Instance.new("UIStroke")
 
 --Properties:
 
@@ -146,7 +146,6 @@ DiscordBTN.Size = UDim2.new(0.472137421, 0, 0.26236105, 0)
 
 UICorner_4.Parent = DiscordBTN
 
--- Add UIStroke to Discord button
 UIStroke_Discord.Parent = DiscordBTN
 UIStroke_Discord.Color = Color3.fromRGB(255, 255, 255)
 UIStroke_Discord.Thickness = 2
@@ -181,7 +180,6 @@ ScriptBTN.Size = UDim2.new(0.472137421, 0, 0.262361109, 0)
 
 UICorner_5.Parent = ScriptBTN
 
--- Add UIStroke to Script button
 UIStroke_Script.Parent = ScriptBTN
 UIStroke_Script.Color = Color3.fromRGB(255, 255, 255)
 UIStroke_Script.Thickness = 2
@@ -218,7 +216,6 @@ local function LHXWEC_fake_script() -- CloseBTN.LocalScript
 	button.Parent = script.Parent
 	
 	button.MouseButton1Click:Connect(function()
-		-- Fixed close button functionality
 		local gui = script.Parent.Parent.Parent.Parent
 		if gui and gui.Name == "Information" then
 			gui:Destroy()
@@ -240,7 +237,7 @@ local function YNDH_fake_script() -- DiscordBTN.LocalScript
 	button.Parent = frame
 	
 	button.MouseButton1Click:Connect(function()
-		setclipboard('loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/a70e413180d7ede96d4a09705648f630.lua"))()')
+		setclipboard("https://discord.gg/rw4YzxnUhp")
 		textLabel.Text = "Copied!"
 	
 		task.delay(2, function()
@@ -263,7 +260,7 @@ local function GUJWTM_fake_script() -- ScriptBTN.LocalScript
 	button.Parent = frame
 	
 	button.MouseButton1Click:Connect(function()
-		setclipboard("https://discord.gg/rw4YzxnUhp")
+		setclipboard('loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/a70e413180d7ede96d4a09705648f630.lua"))()')
 		textLabel.Text = "Copied!"
 	
 		task.delay(2, function()
